@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class HousingService {
-  url = 'localhost:3000/housing';
+  url = 'http://localhost:3000/housing/all';
 
   constructor(private httpClient: HttpClient) {}
 

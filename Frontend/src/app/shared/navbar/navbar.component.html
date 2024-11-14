@@ -1,6 +1,9 @@
 <nav
-  class="w-full flex justify-between items-center sticky px-5 border-b-[1px] py-3"
-  [ngClass]="{ 'bg-[#483d8b] text-white font-semibold': color != undefined }"
+  class="w-full flex justify-between items-center sticky px-5 py-3"
+  [ngClass]="{
+    ' text-white font-semibold': color != undefined,
+    'bg-[#483d8b] border-b-[1px]': bg != undefined
+  }"
 >
   <div class="flex justify-center items-center gap-2">
     <ng-icon name="hugeColors"></ng-icon> EcoRangers

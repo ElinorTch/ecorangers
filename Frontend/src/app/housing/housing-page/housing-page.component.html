@@ -1,5 +1,9 @@
 <div>
-  <app-navbar class="sticky top-0 z-20" [color]="'bg-[#483d8b]'"></app-navbar>
+  <app-navbar
+    class="sticky top-0 z-20"
+    [color]="'bg-[#483d8b]'"
+    [bg]="'bg-[#483d8b]'"
+  ></app-navbar>
   <div
     class="text-white font-semibold text-[30px] bg-[#483d8b] w-full text-center py-2"
   >
@@ -28,7 +32,7 @@
   <div class="flex justify-center gap-5 mt-5">
     <!-- left filter  -->
     <div
-      class="border border-gray-200 w-[250px] h-full p-2 flex flex-col gap-4 rounded-[10px]"
+      class="sticky top-[200px] border border-gray-200 w-[250px] h-full p-2 flex flex-col gap-4 rounded-[10px]"
     >
       <p class="font-bold">Tous les filtres</p>
       <div class="py-2 cursor-pointer" (click)="showFilter('type')">
@@ -59,8 +63,11 @@
       </div>
     </div>
     <div class="w-full max-w-[1000px] grid grid-cols-3 gap-2">
-      @for (item of [0, 0, 0, 0, 0, 0, 0]; track $index) {
-      <app-housing-card class="cursor-pointer"></app-housing-card>
+      @for (house of houses; track $index) {
+      <app-housing-card
+        class="cursor-pointer"
+        [house]="house"
+      ></app-housing-card>
       }
     </div>
   </div>

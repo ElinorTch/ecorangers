@@ -14,6 +14,7 @@ import { hugeUser, hugeColors } from '@ng-icons/huge-icons';
 })
 export class NavbarComponent {
   @Input() color!: string;
+  @Input() bg!: string;
   @Input() page!: string;
   links = [
     {
